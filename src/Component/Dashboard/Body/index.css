@@ -1,0 +1,44 @@
+/* body
+{
+ margin:0px;
+ padding:0px;
+} */
+/* .add-project{
+    float: right;
+} */
+
+.pagination {
+  display: inline-block;
+  float: right;
+  margin-top: -21px;
+  margin-right: 92px;
+}
+
+.pagination a {
+  cursor: pointer;
+  color: black;
+  float: left;
+  /* padding: 2px 9px; */
+  text-align: center;
+  text-decoration: none;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 22px;
+  text-decoration: none;
+}
+.pagination a:hover {
+  background-color: rgb(39, 255, 239);
+}
+@media screen and (max-width: 700px) {
+  .body-container {
+    padding-left: 78px;
+  }
+}
+@media screen and (min-width: 300px) {
+  .body-container {
+    padding-left: 0px;
+  }
+}

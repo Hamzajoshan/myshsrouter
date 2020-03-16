@@ -1,0 +1,159 @@
+.goog-tooltip {
+  display: none !important;
+}
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+div#google_translate_element div.goog-te-gadget-simple {
+  border: none;
+  background-color: transparent;
+  /*background-color: #17548d;*/ /*#e3e3ff*/
+}
+
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value:hover {
+  text-decoration: none;
+}
+
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span {
+  color: #aaa;
+}
+
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span:hover {
+  color: white;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+  /*background: url("url for the icon") 0 0 no-repeat !important;*/
+}
+
+/* Remove the down arrow */
+/* when dropdown open */
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span[style="color: rgb(213, 213, 213);"] {
+  display: none;
+}
+/* after clicked/touched */
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span[style="color: rgb(118, 118, 118);"] {
+  display: none;
+}
+/* on page load (not yet touched or clicked) */
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span[style="color: rgb(155, 155, 155);"] {
+  display: none;
+}
+
+/* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span[style="border-left: 1px solid rgb(187, 187, 187);"] {
+  display: none;
+}
+/* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+div#google_translate_element
+  div.goog-te-gadget-simple
+  a.goog-te-menu-value
+  span[style="border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;"] {
+  display: none;
+}
+/* HIDE the google translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.footer-bg {
+  background-color: #383838;
+  width: 100%;
+}
+.footer-bg ul li {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-bg ul li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 0;
+  font-size: 12px;
+}
+.footer-bg ul li span {
+  padding-left: 30px;
+}
+.footer-bg ul li a:hover {
+  color: rgb(39, 255, 239);
+}
+.footer-bg p {
+  margin-left: 38px;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.footer-bg .icons {
+  margin-top: 60px;
+  left: 60px;
+}
+
+.footer-copyright {
+  background-color: #0891f9;
+  color: #fff;
+}
+.footer-copyright span {
+  margin-right: 80px;
+}
+.fb {
+  height: 50px;
+  width: 25px;
+  margin-bottom: 8px;
+}
+.insta {
+  height: 50px;
+  width: 50px;
+}
+.twiter {
+  height: 40px;
+  width: 45px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.linkedin {
+  height: 50px;
+  width: 55px;
+  margin-bottom: 8px;
+}
+.pintrest {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-bg .icons {
+    margin-top: 20px;
+    left: 60px;
+  }
+}

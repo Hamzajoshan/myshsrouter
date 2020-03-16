@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main-container-card {
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+.bg-image-ssp {
+  background-image: url(../../images/bg1-ssp.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.ssp-main-container {
+  top: 30px;
+  padding-top: 10%;
+}
+.ssp-main-content {
+  color: #fff;
+  border-left: 2px solid #fff;
+}
+.ssp-main-content .ssp-main-content-h3 {
+  font-size: 45px;
+  font-weight: 350;
+}
+.ssp-main-content .ssp-main-content-h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.ssp-main-content .ssp-main-content-p {
+  font-size: 19px;
+}
+
+.get-started {
+  height: 40px;
+  width: 190px;
+  border-radius: 30px;
+  border: none;
+  background-color: #28abe3;
+  color: #fff;
+}
+.get-started:hover {
+  background-color: #1185b7;
+  color: #fff;
+}
+.get-started:focus {
+  outline: none;
+}
+.ssp-main-section {
+  background-color: #2b313d;
+}
+.filter-background {
+  background-color: #333333;
+}
+.ssp-main-filter .ssp-main-filter-h4 {
+  color: #fff;
+
+  font-size: 33px;
+  font-weight: 100;
+}
+.ssp-main-filter h3 {
+  color: #fff;
+}
+.ssp-card-border-btm {
+  border-bottom: 1px solid #000;
+}
+.ssp-main-card {
+  width: 330px;
+  background-color: #e7e7e7;
+  border-radius: 20px;
+}
+.ssp-name {
+  margin-bottom: 0;
+  color: #0072bd;
+  font-weight: 600;
+  font-size: 20px;
+}
+.ssp-contractor {
+  font-size: 14px;
+}
+/* .ssp-card-img img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #2babda;
+  padding: 2px;
+} */
+.ssp-location-icon {
+  padding-top: 9px;
+  float: right;
+  text-align: right;
+  color: #4c4c4c;
+}
+.ssp-location-icon .location-sp {
+  color: #28abe3;
+}
+.ssp-location-icon .location-sp-p {
+  padding-left: 8px;
+}
+
+.ssp-card-disc .ssp-card-disc-h3 {
+  font-size: 20px;
+}
+.view-profile {
+  background-color: #28abe3;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  height: 40px;
+  width: 170px;
+}
+/* necessary to give position: relative to parent. */
+
+
+.ssp-effect-16 {
+  outline: none;
+  width: 160px;
+  color: #fff !important;
+}
+.ssp-effect-16 .option-sp {
+  color: #000 !important;
+}
+.ssp-effect-16 {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #2caae7;
+  background-color: transparent;
+}
+
+.ssp-effect-16 ~ .ssp-focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2caae7;
+  transition: 0.4s;
+}
+.ssp-effect-16:focus ~ .ssp-focus-border,
+.has-content.ssp-effect-16 ~ .ssp-focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+/*= input focus effects css End
+=============================== */
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+/****** Style Star Rating Widget *****/
+.ssp-rating {
+  font-size: 14px;
+}
+.rating {
+  border: none;
+}
+
+.rating > .input-radio {
+  display: none;
+}
+.rating > .input-label:before {
+  margin: 5px;
+  font-size: 0.8em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .input-label {
+  color: #4db4e1;
+  float: right;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .ssp-main-filter h3 {
+    text-align: left;
+  }
+}

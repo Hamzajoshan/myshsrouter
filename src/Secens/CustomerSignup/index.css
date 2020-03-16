@@ -1,0 +1,400 @@
+.blue {
+  color: #2caffd;
+}
+
+#inputDado {
+  font-size: 16px !important;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+}
+#inputDado:focus {
+  border: 2px solid #0891f9;
+}
+
+.custom-sign {
+  text-align: center;
+  display: inline-block;
+  background-color: #0891f9;
+  position: absolute !important;
+  top: 0%;
+  height: 100px;
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  display: inline-block;
+  padding-top: 28px;
+}
+.form {
+  background-color: #fff;
+  border-radius: 20px;
+}
+#form {
+  z-index: 0;
+  padding-top: 4% !important;
+}
+.bg-sign-up {
+  background-image: url(../../images/bg-sign.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.inner-form {
+  margin: 70px;
+  margin-bottom: 10px;
+  margin-top: 130px;
+}
+.button-outer {
+  padding: 9px;
+  border-radius: 35px;
+  background-color: #0891f9;
+  height: 45px;
+  text-align: center;
+  text-decoration: none;
+}
+.button-inner {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+button:hover {
+  background-color: #0891f9e6 !important;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+#inputDado {
+  height: 60px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  border: solid 2px;
+  border-color: #e0e0e0;
+  padding-left: 24px;
+}
+span {
+  text-align: center;
+}
+
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.mainLoginInput {
+  height: 40px;
+  padding: 7px;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.mainLoginInput::-moz-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.mainLoginInput:-ms-input-placeholder {
+  font-family: FontAwesome;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+/* .container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+} */
+.bubble {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  border-radius: 50%;
+  border: 5px solid #999;
+  background-color: #999;
+}
+.bubble1 {
+  position: relative;
+  width: 65px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block;
+  text-align: center;
+}
+.bubble1 i {
+  position: absolute;
+  right: 47px;
+  top: 0px;
+}
+.bubble2 {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block;
+  text-align: center;
+}
+.bubble2 i {
+  position: absolute;
+  top: 0px;
+}
+.bubble.previous {
+  border: 5px solid #fff;
+  background-color: #fff;
+}
+.bubble.previous i {
+  background-color: #0891f9;
+  height: 30px;
+  width: 30px;
+  border: solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.bubble.previous1 {
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.bubble-separator {
+  width: 20%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 27px;
+}
+.bubble-separator1 {
+  width: 3%;
+  height: 5px;
+
+  margin-top: 23px;
+}
+.login1 a:hover {
+  color: rgb(39, 255, 239);
+}
+
+.blue {
+  color: #2caffd;
+}
+
+#inputDado {
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.custom-sign {
+  text-align: center;
+  display: inline-block;
+  background-color: #0891f9;
+  position: absolute;
+  top: 0%;
+  height: 100px;
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  display: inline-block;
+  padding-top: 28px;
+}
+.form {
+  background-color: #fff;
+  border-radius: 20px;
+}
+#form {
+  z-index: 0;
+  padding-top: 10%;
+}
+.bg-sign-up {
+  background-image: url(../../images/bg-sign.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inner-form {
+  margin: 70px;
+  margin-bottom: 10px;
+  margin-top: 130px;
+}
+.button-outer {
+  padding: 9px;
+  border-radius: 35px;
+  background-color: #0891f9;
+  height: 45px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+.button-outer strong:hover {
+  color: rgb(39, 255, 239);
+}
+.button-inner {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+.button-outer .button-inner :hover {
+  color: rgb(39, 255, 239);
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+#inputDado {
+  height: 60px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  border: solid 2px;
+  border-color: #e0e0e0;
+}
+span {
+  text-align: center;
+}
+
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.mainLoginInput {
+  height: 40px;
+  padding: 7px;
+  font-family: Gotham SSm, Helvetica, Arial, sans-serif;
+  margin: 5px 0;
+}
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: Gotham SSm, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.mainLoginInput::-moz-placeholder {
+  font-family: Gotham SSm, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.mainLoginInput:-ms-input-placeholder {
+  font-family: Gotham SSm, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+/* .container {
+    width: 100%;
+  height: 100%;
+  color: #fff;
+} */
+/* .bubble {
+
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  border-radius: 50%;
+  border: 5px solid #999;
+  background-color: #999;
+} */
+/* .bubble1 {
+
+  position: relative;
+  width: 65px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block; 
+  text-align: center;
+  
+}
+.bubble1 i{
+
+ position: absolute; 
+  right: 47px; 
+  top: 0px;
+  
+}
+.bubble2 {
+
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block; 
+  text-align: center;
+  
+} */
+.bubble2 i {
+  position: absolute;
+  top: 0px;
+}
+.bubble.previous {
+  border: 5px solid #fff;
+  background-color: #fff;
+}
+.bubble.previous i {
+  background-color: #0891f9;
+  height: 30px;
+  width: 30px;
+  border: solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.bubble.previous1 {
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.bubble-separator {
+  width: 20%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 27px;
+}
+.bubble-separator1 {
+  width: 3%;
+  height: 5px;
+
+  margin-top: 23px;
+}
+@media only screen and (max-width: 584px) {
+  .form-row {
+    margin-right: -72px !important;
+    margin-left: -72px !important;
+  }
+}

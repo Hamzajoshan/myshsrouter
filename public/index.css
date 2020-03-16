@@ -1,0 +1,127 @@
+.swal-icon--error__line--left {
+  left: 17px;
+}
+.swal-icon--error__line--right {
+  right: 16px;
+}
+
+.swal-icon--warning__body {
+  margin-left: -2px;
+}
+.swal-icon--warning__body,
+.swal-icon--warning__dot {
+  left: 50%;
+}
+.swal-icon--warning__dot {
+  margin-left: -4px;
+}
+.swal-icon--success:before {
+  left: -33px;
+}
+.swal-icon--success:after {
+  border-radius: 0 120px 120px 0;
+
+  left: 30px;
+}
+.swal-icon--success__ring {
+  left: -4px;
+}
+.swal-icon--success__hide-corners {
+  left: 28px;
+}
+
+.swal-icon--success__line--tip {
+  left: 14px;
+}
+.swal-icon--success__line--long {
+  right: 8px;
+}
+
+@-webkit-keyframes animateSuccessTip {
+  0% {
+    left: 1px;
+  }
+  54% {
+    left: 1px;
+  }
+  70% {
+    left: -8px;
+  }
+  84% {
+    left: 21px;
+  }
+  to {
+    left: 14px;
+  }
+}
+@keyframes animateSuccessTip {
+  0% {
+    left: 1px;
+  }
+  54% {
+    left: 1px;
+  }
+  70% {
+    left: -8px;
+  }
+  84% {
+    left: 21px;
+  }
+  to {
+    left: 14px;
+  }
+}
+@-webkit-keyframes animateSuccessLong {
+  0% {
+    right: 46px;
+  }
+  65% {
+    right: 46px;
+  }
+  84% {
+    right: 0;
+  }
+  to {
+    right: 8px;
+  }
+}
+@keyframes animateSuccessLong {
+  0% {
+    right: 46px;
+  }
+  65% {
+    right: 46px;
+  }
+  84% {
+    right: 0;
+  }
+  to {
+    right: 8px;
+  }
+}
+
+.swal-icon--info:before {
+  margin-left: -2px;
+}
+.swal-icon--info:after,
+.swal-icon--info:before {
+  left: 50%;
+}
+.swal-icon--info:after {
+  margin-left: -3px;
+}
+.swal-icon {
+  margin: 20px auto;
+}
+
+.swal-title {
+  padding: 13px 16px;
+}
+
+.swal-content__input,
+.swal-content__textarea {
+  padding: 10px 13px;
+}
+.swal-button__loader {
+  left: 50%;
+}

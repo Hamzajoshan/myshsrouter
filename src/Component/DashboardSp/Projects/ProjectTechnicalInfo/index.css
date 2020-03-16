@@ -1,0 +1,301 @@
+/* body{
+	margin: 0;
+	padding: 0;
+  width: 100%;
+} */
+.wiz3{
+  height: 30px; 
+  width: 30px;  
+  
+  position: absolute; 
+  left: 7px; 
+  top: 8px;
+}
+
+#btn-technical-info{
+  height: 150%;
+  width: 80%;
+  float: right;
+  border-radius: 30px;
+  list-style-type: none;
+  text-decoration: none;
+  background-color: #075ec8;
+  border-color: #075ec8;
+  color: #fff;
+  border-style: none;
+  font-size: 18px;
+}
+button:hover{
+  color:rgb(39, 255, 239);
+  
+}
+#btn-project-type:focus{
+  outline: none;
+  
+}
+.bg-pt{
+  background-image: url(../../../../images/images-info/bg-pt.jpg); background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 100%; */
+
+}
+
+/*= Reset CSS 
+============= */
+
+#basic-info h2{text-align: center; color: #fff; font-size: 28px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 58px; font-weight: 400;}
+#basic-info h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 1px; background-color: #fff; margin-left: -50px;}
+/*= Reset CSS End
+================= */
+
+/*= input focus effects css
+=========================== */
+:focus{outline: none;}
+
+/* necessary to give position: relative to parent. */
+#input{font: 15px/24px "Lato", Arial, sans-serif; color: #fff; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+
+label{
+  color: #959597;
+}
+
+.effect-16, 
+.effect-17, 
+.effect-18{border: 0; padding: 4px 0; border-bottom: 1px solid #fff; background-color: transparent;}
+/* .effect-16 ~ .focus-border1{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color:#f11f1f; transition: 0.4s;}
+.effect-16:focus ~ .focus-border1,
+.has-content.effect-16 ~ .focus-border1{width: 100%; transition: 0.4s;} */
+.effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #2caae7; transition: 0.4s;}
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16 ~ label{position: absolute; left: 0; width: 100%; top: 9px; color: #959597; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16:focus ~ label, .has-content.effect-16 ~ label{top: -16px; font-size: 12px; color: #2caae7; transition: 0.3s;}
+
+/*= input focus effects css End
+=============================== */
+
+ /* .container {
+    width: 100%;
+  height: 100%;
+  color: #fff;
+} */
+.bubble-pt {
+
+  position: relative;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.bubble3-pt {
+
+  position: relative;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.bubble1-pt {
+
+  position: relative;
+  width: 65px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block; 
+  text-align: center;
+  
+}
+.bubble1-pt i{
+
+ position: absolute; 
+  right: 47px; 
+  top: 0px;
+  
+}
+
+.bubble2-pt {
+
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block; 
+  text-align: center;
+  
+}
+.bubble4-pt {
+
+  position: relative;
+  width: 55px;
+  height: 55px;
+  line-height: 45px;
+  font-size: 100%;
+  text-align: center;
+  display: block; 
+  text-align: center;
+  
+}
+.bubble2-pt i{
+
+  position: absolute;  
+  top: 0px; 
+  
+}
+.bubble-pt .previous-pt {
+  border: 5px solid #FFF;
+  background-color: #FFF;
+}
+.bubble-pt .previous-pt {
+  border: 5px solid #FFF;
+  background-color: #FFF;
+}
+.bubble-pt.previous-pt i{
+  background-color: #0891f9; 
+  height: 20px; 
+  width: 20px;  
+  border-radius: 50%; 
+  position: absolute; 
+  left: 11px; 
+  top: 11px;
+}
+/* .bubble3-pt.previous2-pt i{
+  background-color: #0891f9; 
+  height: 20px; 
+  width: 20px;  
+  border-radius: 50%; 
+  position: absolute; 
+  left: 11px; 
+  top: 11px;
+} */
+/* .bubble-pt.previous-pt img{
+   
+  height: 30px; 
+  width: 30px;  
+  
+  position: absolute; 
+  left: 7px; 
+  top: 6px;
+} */
+/* .bubble-pt.previous1-pt img{
+   
+  height: 30px; 
+  width: 30px;  
+  
+  position: absolute; 
+  left: 7px; 
+  top: 6px;
+} */
+/* .bubble-pt.previous1-pt i{
+  background-color: #0891f9; 
+  height: 20px; 
+  width: 20px;  
+  border-radius: 50%; 
+  position: absolute; 
+  left: 11px; 
+  top: 11px;
+} */
+.bubble-pt.previous1-pt {
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+.bubble-separator-pt {
+  width: 10%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 23px;
+
+}
+.bubble-separator2-pt {
+  width: 11%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 23px;
+
+}
+.bubble-separator1-pt {
+  width: 3%;
+  height: 5px;
+
+  margin-top: 23px;
+
+}
+select{
+  width: 330px; 
+  color: #959597;
+}
+@media only screen and (max-width: 670px) {
+.text p{
+ margin-left: -16px;  
+  }
+}
+@media only screen and (max-width: 600px) {
+.text p{
+ margin-left: -30px;  
+  }
+  .text2 p{
+ margin-left: 17px;  
+ text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+.text p{
+ margin-left: -40px;  
+  }
+  .text1 p{
+ margin-left: -10px;  
+ text-align: center;
+  }
+  .text2 p{
+ margin-left: 10px;  
+ text-align: center;
+  }
+}
+@media only screen and (max-width: 413px) {
+.text p{
+ margin-left: -47px;  
+  }
+  
+}
+@media only screen and (max-width: 379px) {
+.text p{
+ margin-left: -53px;  
+  }
+  .text1 p{
+ margin-left: -15px;  
+ text-align: center;
+  }
+ 
+}
+@media only screen and (max-width: 343px) {
+.text p{
+ margin-left: -57px;  
+  }
+  .text1 p{
+ margin-left: -15px;  
+ text-align: center;
+  }
+ 
+}
+@media only screen and (max-width: 280px) {
+.text p{
+ margin-left: -73px;  
+  }
+  .text1 p{
+ margin-left: -20px;  
+ text-align: center;
+  }
+ 
+}

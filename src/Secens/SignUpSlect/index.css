@@ -1,0 +1,128 @@
+.bg1 {
+  background-image: url(../../images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 300%; */
+  /* flex-wrap: wrap; */
+  /* background-size: 100%; */
+  background-attachment: fixed;
+  /* width: 100% !important; */
+  /* height: 1000px; */
+}
+.main-select {
+  padding-top: 8% !important;
+  margin-bottom: 2%;
+}
+.main-select .shs-left {
+  border-left: 6px solid #29abe2;
+  border-top: 6px solid #29abe2;
+  /* position: relative; */
+}
+.main-select .shs-right {
+  border-right: 6px solid #29abe2;
+  border-top: 6px solid #29abe2;
+}
+.main-select h1 {
+  margin-top: -25px;
+  margin-bottom: 80px;
+  color: #fff;
+  font-weight: bold;
+}
+.box-left {
+  height: 250px;
+  right: 4%;
+  border-radius: 25px;
+  background-color: #29abe259;
+}
+.box-left:hover {
+  background-color: #29abe2a3;
+}
+
+.box-left h2 {
+  color: #fff;
+  padding-top: 35%;
+  cursor: pointer;
+}
+/* .box-left h2:hover{
+			color: rgb(39, 255, 239);
+		} */
+.box-right {
+  height: 250px;
+  left: 16%;
+  border-radius: 25px;
+  background-color: #29abe259;
+}
+.box-right:hover {
+  background-color: #29abe2a3;
+}
+
+.box-right h2 {
+  color: #fff;
+  padding-top: 35%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .box-right {
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 584px) {
+  .bg1 {
+    background-image: url(../../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 300%; */
+    /* flex-wrap: wrap; */
+    /* background-size: 100%; */
+    background-attachment: inherit;
+    /* width: 100% !important; */
+    /* height: 1000px; */
+  }
+  .main-select {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 752px) {
+  .box-right {
+    left: 40%;
+  }
+}
+@media only screen and (max-width: 692px) {
+  .box-right {
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .box-right {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 762px) {
+  .box-right {
+    left: 5% !important;
+  }
+  .box-left {
+    right: -2%;
+  }
+}
+@media only screen and (max-width: 584px) {
+  /* .box-left {
+    height: 150px;
+  } */
+  /* .box-right {
+    height: 150px;
+  } */
+  .box-right {
+    left: 2% !important;
+    margin-top: 10%;
+  }
+  .box-left h2 {
+    padding-top: 30%;
+  }
+  .box-right h2 {
+    padding-top: 30%;
+    /* font-size: 30px; */
+    /* margin-left: -12px; */
+  }
+}

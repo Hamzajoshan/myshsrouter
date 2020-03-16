@@ -1,0 +1,160 @@
+.profile-img {
+  background-color: #2e323e;
+}
+/*.skill button{
+    height: 200%;
+    
+    float: right;
+    border-radius: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: transparent; ;
+    border: 3px solid #075ec8;
+    color: #075ec8;
+    
+    font-size: 18px;
+    margin-left: 7px;
+  }
+  .skill button:hover{
+    background-color: #075ec8; ;
+  
+    color: #fff;
+    
+    font-size: 18px;
+    margin-left: 7px;
+  }
+  .skill .btn-fill{
+    height: 200%;
+    
+    float: right;
+    border-radius: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #075ec8; ;
+    border: 3px solid #075ec8;
+    color: #fff;
+    
+    font-size: 18px;
+    margin-left: 7px;
+  }
+  .skill .btn-fill:hover{
+    background-color: #fff; ;
+    color: #075ec8;
+    
+    font-size: 18px;
+    margin-left: 7px;
+  }*/
+.submit .submit-button {
+  height: 150%;
+  width: 80%;
+  float: right;
+  border-radius: 30px;
+  list-style-type: none;
+  text-decoration: none;
+  background-color: #075ec8;
+  border-color: #075ec8;
+  color: #fff;
+  border-style: none;
+  font-size: 18px;
+}
+
+/*= input focus effects css
+  =========================== */
+:focus {
+  outline: none;
+}
+
+/* necessary to give position: relative to parent. */
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #959597;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+input[type="number"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #959597;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-16-profile {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 2px solid #cecece;
+  background-color: transparent;
+}
+
+.effect-16-profile ~ .focus-border-profile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2caae7;
+  transition: 0.4s;
+}
+.effect-16-profile:focus ~ .focus-border-profile,
+.has-content.effect-16-profile ~ .focus-border-profile {
+  width: 100%;
+  transition: 0.4s;
+}
+.effect-16-profile ~ label {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #959597;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 0.5px;
+}
+.effect-16-profile:focus ~ label,
+.has-content.effect-16-profile ~ label {
+  top: -16px;
+  font-size: 12px;
+  color: #2caae7;
+  transition: 0.3s;
+}
+
+/*= input focus effects css End
+  =============================== */
+
+/*select image css start*/
+.img-thumbnail {
+  padding: 1px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 50% !important;
+  max-width: 100%;
+
+  height: 125px;
+}
+.cabinet {
+  display: block;
+  cursor: pointer;
+}
+
+.cabinet .file {
+  position: relative;
+
+  width: auto;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  margin-top: -130px;
+  display: none;
+}
+
+#upload-demo {
+  width: 250px;
+  height: 250px;
+  padding-bottom: 25px;
+}
+
+.profile-name .profile-name-p {
+  color: #ccc;
+  font-size: large;
+}

@@ -1,0 +1,183 @@
+.bubble-pt {
+
+    position: relative;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+  }
+  .bubble3-pt {
+  
+    position: relative;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+  }
+  .bubble1-pt {
+  
+    position: relative;
+    width: 65px;
+    height: 55px;
+    line-height: 45px;
+    font-size: 100%;
+    text-align: center;
+    display: block; 
+    text-align: center;
+    
+  }
+  .bubble1-pt i{
+  
+   position: absolute; 
+    right: 47px; 
+    top: 0px;
+    
+  }
+  
+  .bubble2-pt {
+  
+    position: relative;
+    width: 55px;
+    height: 55px;
+    line-height: 45px;
+    font-size: 100%;
+    text-align: center;
+    display: block; 
+    text-align: center;
+    
+  }
+  .bubble4-pt {
+  
+    position: relative;
+    width: 55px;
+    height: 55px;
+    line-height: 45px;
+    font-size: 100%;
+    text-align: center;
+    display: block; 
+    text-align: center;
+    
+  }
+  .bubble-pt i{
+  
+    position: absolute;  
+    top: 0px; 
+    
+  }
+  .bubble-pt1 i{
+  
+    position: absolute;  
+    top: 0px; 
+    
+  }
+  .bubble-pt2 i{
+  
+    position: absolute;  
+    top: 0px; 
+    
+  }
+  .bubble-pt .previous-pt {
+    border: 5px solid #FFF;
+    background-color: #FFF;
+  }
+  .bubble-pt .previous-pt {
+    border: 5px solid #FFF;
+    background-color: #FFF;
+  }
+  .bubble-pt.previous-pt i{
+    background-color: #0891f9; 
+    height: 20px; 
+    width: 20px;  
+    border-radius: 50%; 
+    position: absolute; 
+    left: 11px; 
+    top: 11px;
+  }
+  .bubble-pt1 i{
+    background-color: #0891f9; 
+    height: 20px; 
+    width: 20px;  
+    border-radius: 50%; 
+    position: absolute; 
+    left: 11px; 
+    top: 11px;
+  }
+  .bubble-pt2 i{
+    background-color: #0891f9; 
+    height: 20px; 
+    width: 20px;  
+    border-radius: 50%; 
+    position: absolute; 
+    left: 11px; 
+    top: 11px;
+  }
+  /* .bubble3-pt.previous2-pt i{
+    background-color: #0891f9; 
+    height: 20px; 
+    width: 20px;  
+    border-radius: 50%; 
+    position: absolute; 
+    left: 11px; 
+    top: 11px;
+  } */
+  /* .bubble-pt.previous-pt img{
+     
+    height: 30px; 
+    width: 30px;  
+    
+    position: absolute; 
+    left: 7px; 
+    top: 6px;
+  } */
+  /* .bubble-pt.previous1-pt img{
+     
+    height: 30px; 
+    width: 30px;  
+    
+    position: absolute; 
+    left: 7px; 
+    top: 6px;
+  } */
+  /* .bubble-pt.previous1-pt i{
+    background-color: #0891f9; 
+    height: 20px; 
+    width: 20px;  
+    border-radius: 50%; 
+    position: absolute; 
+    left: 11px; 
+    top: 11px;
+  } */
+  .bubble-pt.previous1-pt {
+    border: 2px solid #fff;
+    background-color: transparent;
+  }
+  .bubble-separator-pt {
+    width: 10%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 23px;
+  
+  }
+  .bubble-separator2-pt {
+    width: 11%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 23px;
+  
+  }
+  .bubble-separator1-pt {
+    width: 3%;
+    height: 5px;
+  
+    margin-top: 23px;
+  
+  }
+  

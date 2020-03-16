@@ -1,0 +1,481 @@
+.bg-login{
+	background-image: url(./images/bg-sign.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+}
+.triangle-left {
+			width: 0;
+			height: 0;
+			border-top: 50px solid transparent;
+			border-right: 100px solid #a9b2ba;
+			border-bottom: 50px solid transparent;
+			position: absolute;
+			right: 0;
+			top: 30%;
+		}
+		.main-login{
+			margin-bottom: 30px;
+			border-right: 100px solid ;
+			border: 2px solid #060707;
+			border-radius: 20px;
+			padding: 0px;
+			margin-right: 0px;
+			padding-left: 0px;
+			border-radius: 20px;
+			margin-top: 1% !important;
+
+		}
+		.animated { 
+            background-image: url(/css/images/logo.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+           
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s; 
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; 
+         }
+         
+         @-webkit-keyframes bounceIn {
+            0% {
+               opacity: 0;
+               -webkit-transform: scale(.3);
+            }
+            50% {
+               opacity: 1;
+               -webkit-transform: scale(1.05);
+            }
+            70% {
+               -webkit-transform: scale(.9);
+            }
+            100% {
+               -webkit-transform: scale(1);
+            }
+         }
+         
+         @keyframes bounceIn {
+            0% {
+               opacity: 0;
+               transform: scale(.3);
+            }
+            50% {
+               opacity: 1; 
+               transform: scale(1.05);
+            }
+            70% {
+               transform: scale(.9);
+            }
+            100% {
+               transform: scale(1);
+            }
+         }
+         
+         .bounceIn {
+            -webkit-animation-name: bounceIn; 
+            animation-name: bounceIn;
+         }
+		.left-side{
+			position: relative;
+			padding: 0px;
+			height: auto;
+			
+
+		}
+		.login{
+			height: 310px; 
+			background-color: #203957d1;  
+			color: #88bdef;
+			border-radius: 17px 0px 0px 0px;
+
+
+		}
+		.login h3{
+			position: absolute; 
+			top: 35%; 
+			left: 30%; 
+			border-left: 7px solid #88bdef;
+			padding-left: 10px; 
+			font-size: 50px;
+			font-weight: bold;
+		}
+		.sign-up:hover{
+			
+			color: #88bdef96;
+			
+		}
+		.sign-up{
+			height: 320px; 
+			background-color: #88bdef96; 
+			text-align: center; 
+			padding-top: 80px; 
+			color: #203957;
+			border-radius: 0px 0px 0px 17px;
+		}
+		.sign-up h3{
+			position: absolute; 
+			top: 35%; 
+			left: 30%; 
+			border-left: 7px solid #203957; 
+			padding-left: 10px; 
+			font-size: 50px;
+			font-weight: bold;
+		}
+		.right-side{
+			padding-left: 80px; 
+			padding-right: 80px; 
+			padding-top: 50px;
+			background-color: #cacfd2c9;
+			border-radius: 0px 17px 17px 0px;
+
+		}
+		.right-side .user span{
+			color: #7b7b7b;
+			font-weight: 500;
+			padding-top: 20px;
+			/* margin-bottom: 20px; */
+		}
+		.right-side .user a{
+			text-decoration: none;
+			color: #203957;
+			font-weight: bold;
+
+		}
+		.right-side .user a:hover{
+			text-decoration: none;
+			color: #88bdef;
+			font-weight: bold;
+
+		}
+
+		.right-side .btSnubmit{
+			height: 50px;
+			width: 180px;
+			background-color: #203957;
+			color: #88bdef;
+			border: 1px solid #203957;
+			border-radius: 25px;
+			font-size: 30px;
+			text-align: center;
+			font-weight: 700;
+
+
+		}
+		.right-side .btSnubmit:hover{
+			
+			background-color: #88bdef;
+			color: #203957;
+			border: 1px solid #88bdef;
+
+
+		}
+		.right-side .btSnubmit:focus{
+			
+			outline: none;
+			
+
+
+		}
+		.right-side input[type=text] {
+			border: none;
+			border-bottom: 2px solid #000; 
+			background-color: transparent; 
+
+		}
+	 input:focus {
+			box-shadow: none !important;
+
+		}
+		.right-side input[type=password] {
+			border: none;
+			border-bottom: 2px solid #000; 
+			color: #000;
+			background-color: transparent; 
+
+		}
+		
+		.right-side .btnForgetPwd a {
+			text-decoration: none;
+			color: #7b7b7b;
+			font-weight: bold;
+
+		}
+		.right-side .btnForgetPwd a:hover {
+			text-decoration: none;
+			color: #203957;
+			font-weight: bold;
+
+		}
+		.right-side .btnForgetPwd span {
+			text-decoration: none;
+			color: #7b7b7b;
+			font-weight: bold;
+
+		}
+		.right-side h1 {
+			
+			text-align: center;
+			/* font-weight: 2550; */
+			font-size: 65px;
+			color: #203957
+		}
+
+		.right-side h4 {
+			text-align: center;
+			font-size: 35px;
+			margin-bottom: 20px;
+			/* margin-top: -70px !important;	 */
+		}
+		.form-group label{
+
+			color: #7b7b7b;
+
+		}
+		.form-group label:hover{
+
+			color: #203957;
+		}
+		.left-side1{
+			display: none;
+		}
+
+		/* The check */
+		.check {
+			display: block;
+			position: relative;
+			padding-left: 25px;
+			margin-bottom: 12px;
+			padding-right: 15px;
+			cursor: pointer;
+			font-weight: bold;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			color: #7b7b7b;
+		}
+
+		/* Hide the browser's default checkbox */
+		.check input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		/* Create a custom checkbox */
+		.checkmark {
+			position: absolute;
+			top: 3px;
+			left: 0;
+			height: 18px;
+			width: 18px;
+			background-color: transparent; ;
+			border-color:#7b7b7b;
+			border-style:solid;
+			border-width:2px;
+		}
+
+
+
+		/* When the checkbox is checked, add a blue background */
+		.check input:checked ~ .checkmark {
+			background-color: #fff  ;
+		}
+
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.check input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.check .checkmark:after {
+			left: 5px;
+			top: 1px;
+			width: 5px;
+			height: 10px;
+			border: solid ;
+			border-color:#7b7b7b;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+
+
+		@media only screen and (max-width: 1191px) {
+			.login{
+				height: 303px;
+			}
+		}
+
+
+		@media only screen and (max-width: 991px) {
+			/* .left-side1{
+
+			} */
+			.triangle-left {
+				width: 0;
+				height: 0;
+				border-top: 35px solid transparent;
+				border-right: 50px solid #a9b2ba;
+				border-bottom: 30px solid transparent;
+				position: absolute;
+				right: 0;
+				top: 35%;
+			}
+			.login h3{
+				position: absolute; 
+				top: 35%; 
+				left: 20%; 
+				border-left: 7px solid #88bdef;
+				padding-left: 10px; 
+				font-size: 50px;
+				font-weight: bold;
+			}
+			.sign-up h3{
+				position: absolute; 
+				top: 35%; 
+				left: 20%; 
+				border-left: 7px solid #203957; 
+				padding-left: 10px; 
+				font-size: 50px;
+				font-weight: bold;
+			}
+            
+
+			.right-side{
+				padding-left: 30px; 
+				padding-right: 30px; 
+				padding-top: 15px;
+				background-color: #cacfd2c9;
+				border-radius: 0px 17px 17px 0px;
+
+			}
+			.right-side .btnForgetPwd  {
+				display: inline-block;
+
+			}
+			.right-side .btnForgetPwd span {
+				text-decoration: none;
+				color: #7b7b7b;
+				font-weight: bold;
+
+
+			}
+
+		}
+		
+		@media only screen and (max-width: 767px) {
+
+			.left-side{
+				display: none;
+
+			}
+			.triangle-left1 {
+				width: 0;
+				height: 0;
+				border-left: 45px solid transparent;
+				border-right: 45px solid transparent;
+				border-bottom: 72px solid #a9b2ba;
+				left: 40% ! important;
+				top: 133px ! important;
+				margin-bottom: 0px;
+				position: absolute;
+			}
+			.triangle-left {
+				display: none;
+			}
+
+
+			.left-side1{
+				position: relative;
+				padding: 0px;
+
+
+			}
+			.left-side1{
+				display: block;
+
+
+			}
+			.login1{
+				height: 205px; 
+				background-color: #203957d1;  
+				color: #88bdef;
+				
+
+
+			}
+			.login1 h3{
+				position: absolute; 
+				top: 35%; 
+				left: 30%; 
+				border-left: 7px solid #88bdef;
+				padding-left: 10px; 
+				font-size: 50px;
+				font-weight: bold;
+			}
+			.sign-up1{
+				height: 205px; 
+				background-color: #88bdef96; 
+				text-align: center; 
+				padding-top: 80px; 
+				color: #203957;
+				border-radius: 17px 17px 0px 0px;
+			}
+			.sign-up1:hover{
+				 
+				color: #88bdef96;
+				/* border:  */
+			}
+			.sign-up1 h3{
+				position: absolute; 
+				top: 35%; 
+				left: 30%; 
+				border-left: 7px solid #203957; 
+				padding-left: 10px; 
+				font-size: 50px;
+				font-weight: bold;
+			}
+
+			.form-group1 label{
+
+				color: #7b7b7b;
+			
+			}
+			.right-side{
+				padding-left: 30px; 
+				padding-right: 30px; 
+				padding-top: 15px;
+				background-color: #cacfd2c9;
+				border-radius: 0px 0px 17px 17px;
+
+			}
+		}
+		@media only screen and (max-width: 360px) {
+			.triangle-left1{
+				left: 37% !important;
+			}
+			.right-side .btnForgetPwd .forgot {
+				margin-left: 0px;
+				padding-left: 0px;
+	
+			}
+		}
+		@media only screen and (max-width: 578px) {
+			.right-side .btnForgetPwd .forgot {
+				margin-left: 5px !important;
+				padding-left: 0px !important;
+				float: left !important;
+	
+			}
+		}
+	
