@@ -124,7 +124,7 @@ const routing = (
             path="/forgotpassword"
             component={ResetPasswordRequest}
           />
-
+          {/* problem here */}
           <Route path="/Home/:key" component={EnterNewPassword} />
           <Route path="/newfeeds" component={NewFeeds} />
           <Route path="/dashboard" component={Dashboard} />
