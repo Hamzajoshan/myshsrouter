@@ -23,10 +23,30 @@ class index extends Component {
       repeatPasswordLable: false,
       success: false,
       token: "",
-      passwordLengthLable: false
+      passwordLengthLable: false,
+      bothPasswordsEqual: false,
+      isCurrentPasswordError: false,
+      isNewPasswordError: false,
+      isNewPasswordRepeatError: false,
+      isPasswordPatterenError: false
     };
     this.ForgotUserPassword = this.ForgotUserPassword.bind(this);
   }
+  onNewPasswordChange = e => {
+    let passwordNew = e.target.value.split(" ").join("");
+
+    this.setState({
+      newPassword: passwordNew,
+      passwordLable: false,
+      passwordLengthLable: false,
+      passwordLengthLable: false,
+      bothPasswordsEqual: false,
+      isCurrentPasswordError: false,
+      isNewPasswordError: false,
+      isNewPasswordRepeatError: false,
+      isPasswordPatterenError: false
+    });
+  };
   componentWillMount() {
     let params = queryString.parse(this.props.location.search);
     const query = new URLSearchParams(this.props.location.search);
@@ -35,14 +55,16 @@ class index extends Component {
     this.setState({
       token: token
     });
+
     let url = window.location.href;
     console.log("window.location.href", window.location.href);
-    let a = url.slice(45, url.length);
+    let a = url.slice(52, url.length);
     console.log("a", a);
     this.setState({
       token: a
     });
   }
+
   ForgotUserPassword = e => {
     e.preventDefault();
     this.setState({
@@ -54,91 +76,147 @@ class index extends Component {
       this.setState({
         submitDisabled: false,
         loading: false,
-        passwordLable: true
+        isPasswordPatterenError: true
       });
-    } else if (newPassword.length < 3) {
-      this.setState({
-        submitDisabled: false,
-        loading: false,
-        passwordLengthLable: true
-      });
-    } else if (newPassword !== repeatPassword) {
+      return;
+    } else {
+      if (!this.countCapitalLettersLength(newPassword) > 0) {
+        this.setState({
+          isPasswordPatterenError: true,
+          loading: false,
+          submitDisabled: false
+        });
+        return;
+      }
+      if (!this.countSmallettersLength(newPassword) > 0) {
+        this.setState({
+          isPasswordPatterenError: true,
+          loading: false,
+          submitDisabled: false
+        });
+        return;
+      }
+      if (!this.countNumericLength(newPassword) > 0) {
+        this.setState({
+          isPasswordPatterenError: true,
+          loading: false,
+          submitDisabled: false
+        });
+        return;
+      }
+      if (newPassword.length < 8) {
+        this.setState({
+          isPasswordPatterenError: true,
+          loading: false,
+          submitDisabled: false
+        });
+        return;
+      }
+    }
+    if (newPassword !== repeatPassword) {
       this.setState({
         submitDisabled: false,
         loading: false,
         repeatPasswordLable: true
       });
-    } else {
-      console.log("token", token);
-      console.log("new password", newPassword);
-      //Here I Will Make API Call
-      //https://shsbackend1.azurewebsites.net/api/services/app/User/ResetPasswordByToken
-      //vgv%2fBdcMOBozjv%2foz4lOmXQLwX1YncqSGU%2bLdS%2fW3Dp%2fD5ylpD6Q%2bEPty5jesFwy5zkPrcqWLpHh4cq0G%2bO6ig%3d%3d
-      fetch(
-        `${baseUrl}api/services/app/User/ResetPasswordByToken`,
+      return;
+    }
 
-        {
-          method: "post",
+    console.log("token", token);
+    console.log("new password", newPassword);
 
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            token: token,
+    //Here I Will Make API Call
+    //https://shsbackend1.azurewebsites.net/api/services/app/User/ResetPasswordByToken
+    //vgv%2fBdcMOBozjv%2foz4lOmXQLwX1YncqSGU%2bLdS%2fW3Dp%2fD5ylpD6Q%2bEPty5jesFwy5zkPrcqWLpHh4cq0G%2bO6ig%3d%3d
+    fetch(
+      `${baseUrl}api/services/app/User/ResetPasswordByToken`,
 
-            newPassword: newPassword
-          })
-        }
-      )
-        .then(function(response) {
-          return response.json(); //response.json() is resolving its promise. It waits for the body to load
+      {
+        method: "post",
+
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          token: token,
+
+          newPassword: newPassword
         })
-        .then(
-          responseData => {
-            //  alert(responseData);
+      }
+    )
+      .then(function(response) {
+        return response.json(); //response.json() is resolving its promise. It waits for the body to load
+      })
+      .then(
+        responseData => {
+          //  alert(responseData);
+          SweetAlert(
+            <div style={{ color: "green" }}>
+              <h1>
+                {" "}
+                <strong>Success!</strong>
+              </h1>
+              <p style={{ fontSize: "20px" }}>Password Changed Successfully.</p>
+            </div>
+          );
+          this.setState({
+            success: responseData.success
+          });
+          if (!responseData.success) {
+            console.log(responseData);
+            this.setState({
+              errormessage: responseData.error.message,
+              success: false,
+              loading: false,
+              submitDisabled: false
+            });
             SweetAlert(
-              <div style={{ color: "green" }}>
+              <div className="alert alert-danger fade show">
                 <h1>
                   {" "}
-                  <strong>Success!</strong>
+                  <strong>Error!</strong>
                 </h1>
-                <p style={{ fontSize: "20px" }}>
-                  Password Changed Successfully.
-                </p>
+                <p style={{ fontSize: "30px" }}>{this.state.errormessage}</p>
               </div>
             );
-            this.setState({
-              success: responseData.success
-            });
-            if (!responseData.success) {
-              console.log(responseData);
-              this.setState({
-                errormessage: responseData.error.message,
-                success: false
-              });
-              SweetAlert(
-                <div className="alert alert-danger fade show">
-                  <h1>
-                    {" "}
-                    <strong>Error!</strong>
-                  </h1>
-                  <p style={{ fontSize: "30px" }}>{this.state.errormessage}</p>
-                </div>
-              );
-            }
-          },
-          error => {
-            // console.log(error)
-            // this.setState({
-            //   errormessage:error,
-            // });
           }
-        )
-        .catch(error => {
-          console.log(error);
-        });
+        },
+        error => {
+          // console.log(error)
+          // this.setState({
+          //   errormessage:error,
+          // });
+        }
+      )
+      .catch(error => {
+        console.log(error);
+      });
+  };
+  countCapitalLettersLength = str => {
+    var count = 0,
+      len = str.length;
+    for (let i = 0; i < len; i++) {
+      if (/[A-Z]/.test(str.charAt(i))) count++;
     }
+    return count;
+  };
+  countSmallettersLength = str => {
+    var count = 0,
+      len = str.length;
+    for (let i = 0; i < len; i++) {
+      if (/[a-z]/.test(str.charAt(i))) count++;
+    }
+    return count;
+  };
+  countNumericLength = str => {
+    var iCount = 0;
+    for (let iIndex in str) {
+      if (!isNaN(parseInt(str[iIndex]))) {
+        iCount++;
+      }
+    }
+    return iCount;
   };
   onRepeatePasswordChange = e => {
     let passwordRepeat = e.target.value.split(" ").join("");
@@ -146,16 +224,6 @@ class index extends Component {
     this.setState({
       repeatPassword: passwordRepeat,
       repeatPasswordLable: false
-    });
-  };
-
-  onNewPasswordChange = e => {
-    let passwordNew = e.target.value.split(" ").join("");
-
-    this.setState({
-      newPassword: passwordNew,
-      passwordLable: false,
-      passwordLengthLable: false
     });
   };
 
@@ -187,10 +255,15 @@ class index extends Component {
                             <p style={{ fontSize: "20px" }}>
                               {this.props.t("new_password")}
                             </p>
-                            {this.state.passwordLable ? (
-                              <label className="text-danger">
-                                {this.props.t("password_req")}
-                              </label>
+                            {this.state.isNewPasswordError ? (
+                              <span style={{ color: "red" }}>
+                                {this.props.t("enter_new_pass")}
+                              </span>
+                            ) : null}
+                            {this.state.isPasswordPatterenError ? (
+                              <span style={{ color: "red" }}>
+                                {this.props.t("passwor_error")}
+                              </span>
                             ) : null}
                           </div>
                           <div className="form-group col-md-12">
