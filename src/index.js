@@ -13,7 +13,7 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 import Login from "./Secens/Login";
 // import MultiOptionCheck from "./Secens/check_multi";
 import SPsignup from "./Secens/SPsignup";
-import EnterNewPassword from "./Secens/checkForgotPassword";
+import EnterNewPassword from "./Secens/EnterNewPassword";
 
 import SearchSp from "./Secens/search-sp";
 import ResetPasswordRequest from "./Secens/ResetPassword";
@@ -122,7 +122,7 @@ const routing = (
           <Route path="/chat" component={Chat} />
           <Route path="/forgotpassword" component={ResetPasswordRequest} />
           {/* problem here */}
-          <Route path="/Home/:key" component={EnterNewPassword} />
+          <Route exact path="/reset-password" component={EnterNewPassword} />
           <Route path="/newfeeds" component={NewFeeds} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/addnew" component={NewProject} />
