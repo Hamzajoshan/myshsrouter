@@ -36,6 +36,7 @@ class index extends Component {
       pnumber: "",
       pnumberLabel: "",
       username: "",
+      isActive: true,
       usernameLabel: false,
       dateLoading: true,
       submitDisabled: false,
@@ -107,7 +108,16 @@ class index extends Component {
     });
   };
   userRegistration = e => {
-    const { Fname, Lname, email, username, userId, sub, pnumber } = this.state;
+    const {
+      Fname,
+      Lname,
+      email,
+      username,
+      userId,
+      sub,
+      pnumber,
+      isActive
+    } = this.state;
     e.preventDefault();
     this.setState({
       loading: true,
@@ -179,7 +189,9 @@ class index extends Component {
           name: Fname,
           surname: Lname,
           emailAddress: email,
+          isActive: isActive,
           phoneNumber: pnumber,
+          userType: 1,
           reffId: userId,
           id: sub
         })
@@ -316,6 +328,7 @@ class index extends Component {
                         class="effect-16-profile"
                         type="text"
                         placeholder=""
+                        readOnly
                         onChange={this.onFnameChange}
                         value={this.state.Fname}
                       />
@@ -333,6 +346,7 @@ class index extends Component {
                         class="effect-16-profile"
                         type="text"
                         placeholder=""
+                        readOnly
                         onChange={this.onLnameChange}
                         value={this.state.Lname}
                       />
@@ -392,6 +406,7 @@ class index extends Component {
                         class="effect-16-profile"
                         type="text"
                         placeholder=""
+                        readOnly
                         onChange={this.onUsernameChange}
                         value={this.state.username}
                       />

@@ -36,7 +36,8 @@ class index extends Component {
       success: false,
       ProjectDocuments: "",
       projectId: "",
-      linkToBack: ""
+      linkToBack: "",
+      spId: ""
     };
     this.handleSubmitReason = this.handleSubmitReason.bind(this);
     this.handleReason = this.handleReason.bind(this);
@@ -51,6 +52,9 @@ class index extends Component {
 
     // this.resultsDiv = React.createRef();
   }
+  gotoServiceProviderProfile = () => {
+    this.props.history.push(`/serviceProvider/${this.state.spId}`);
+  };
   goBack = e => {
     this.props.history.push("/project_details/" + this.state.projectId);
   };
@@ -287,8 +291,10 @@ class index extends Component {
       .then(json => {
         if (json.success) {
           let result = json.result;
+          console.log("bid result", result);
           this.setState({
-            result: result
+            result: result,
+            spId: result.serviceProvider.user.id
           });
         }
       })
@@ -545,6 +551,17 @@ class index extends Component {
                   >
                     {this.props.t("back")}
                   </button>
+                </div>
+                <div class=" row ">
+                  <div class="col-md-12 col-12 mt-5 attach">
+                    <button
+                      onClick={() => this.gotoServiceProviderProfile()}
+                      className="button"
+                      style={{ width: "200px" }}
+                    >
+                      {this.props.t("sp_profile")}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

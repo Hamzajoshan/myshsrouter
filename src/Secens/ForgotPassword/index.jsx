@@ -27,22 +27,22 @@ class index extends Component {
     };
     this.ForgotUserPassword = this.ForgotUserPassword.bind(this);
   }
-  componentWillMount() {
-    let params = queryString.parse(this.props.location.search);
-    const query = new URLSearchParams(this.props.location.search);
-    const token = query.get("key");
-    console.log("token", token);
-    this.setState({
-      token: token
-    });
-    let url = window.location.href;
-    console.log("window.location.href", window.location.href);
-    let a = url.slice(45, url.length);
-    console.log("a", a);
-    this.setState({
-      token: a
-    });
-  }
+  // componentWillMount() {
+  //   let params = queryString.parse(this.props.location.search);
+  //   const query = new URLSearchParams(this.props.location.search);
+  //   const token = query.get("key");
+  //   console.log("token", token);
+  //   this.setState({
+  //     token: token
+  //   });
+  //   let url = window.location.href;
+  //   console.log("window.location.href", window.location.href);
+  //   let a = url.slice(45, url.length);
+  //   console.log("a", a);
+  //   this.setState({
+  //     token: a
+  //   });
+  // }
   ForgotUserPassword = e => {
     e.preventDefault();
     this.setState({

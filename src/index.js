@@ -13,7 +13,7 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 import Login from "./Secens/Login";
 // import MultiOptionCheck from "./Secens/check_multi";
 import SPsignup from "./Secens/SPsignup";
-import EnterNewPassword from "./Secens/ForgotPassword";
+import EnterNewPassword from "./Secens/checkForgotPassword";
 
 import SearchSp from "./Secens/search-sp";
 import ResetPasswordRequest from "./Secens/ResetPassword";
@@ -29,6 +29,7 @@ import SelectSignup from "./Secens/SignUpSlect";
 import { CookiesProvider } from "react-cookie";
 import { Provider } from "react-redux";
 import configureStore from "./store";
+import DynamicRoutes from "./checkDynamicRouting";
 import NewFeeds from "./Component/NewFeeds";
 import Dashboard from "./Component/Dashboard";
 import NewProject from "./Component/Dashboard/Projects/AddNewProject";
@@ -44,6 +45,7 @@ import GiveReviews from "./Component/Dashboard/Reviews";
 import EditProfileCust from "./Component/Dashboard/editProfile";
 import ProjectDetails from "./Component/Dashboard/ProjectDetails";
 import Chat from "./Component/Dashboard/Chat";
+import ServiceProviderDetails from "./Component/Dashboard/SpDetails";
 import ProjectInfo from "./Component/NewFeeds/projectinfo";
 import ProjectFilesView from "./Component/projectFilesView"; //projectFiles
 import ChangePassword from "./Component/Dashboard/ChangePassword";
@@ -53,6 +55,7 @@ import MyDashboard from "./Component/DashboardSp";
 import MyBidByProject from "./Component/DashboardSp/bidByProject";
 
 import MakeBid from "./Component/DashboardSp/makeBid";
+import CustomerDetails from "./Component/DashboardSp/customerDetails";
 import MyBidDetails from "./Component/DashboardSp/BidDetails";
 import MyWorkspace from "./Component/DashboardSp/Workspace";
 import ClosedProjects from "./Component/DashboardSp/ClosedProjects";
@@ -78,12 +81,13 @@ const routing = (
       <Provider store={store}>
         <div>
           <Route exact path="/" component={App} />
+          <Route path="/dynamic/:id" component={DynamicRoutes} />
           {/* sp dashboard routes */}
           <Route path="/projectFiles/:fileUrl" component={ProjectFilesView} />
           <Route path="/mydashboard" component={MyDashboard} />
           <Route path="/checkloader" component={CheckLoader} />
           <Route path="/editProfileSp" component={EditProfileSp} />
-
+          <Route path="/customerDetails/:custId" component={CustomerDetails} />
           <Route path="/activeProjects" component={MyActiveProjects} />
           <Route path="/closedprojects" component={ClosedProjects} />
           <Route path="/cancelledprojects" component={cancelledProjects} />
@@ -94,11 +98,7 @@ const routing = (
             component={MyProjectDetails}
           />
           <Route path="/makebid/:projectId" component={MakeBid} />
-          <Route
-            exact
-            path="/changepassworduser"
-            component={ChangeMyPassword}
-          />
+          <Route path="/changepassworduser" component={ChangeMyPassword} />
           <Route
             path="/projectbids/:projectId/:project_title"
             component={MyBidByProject}
@@ -108,22 +108,19 @@ const routing = (
             path="/bidDetails/:bid_id/:project_title/:project_id"
             component={BidDetails}
           />
+
           {/* sp dashboard routes end */}
 
-          <Route exact path="/changepassword" component={ChangePassword} />
+          <Route path="/changepassword" component={ChangePassword} />
 
-          <Route exact path="/myprofile" component={MyProfile} />
+          <Route path="/myprofile" component={MyProfile} />
           <Route path="/CustSignup" component={CustomerSignup} />
 
           {/* <Route path="/SP_TechnicalInfo" component={SP_TechnicalInfo} /> */}
           <Route path="/basicInfo" component={BasicInfo} />
           {/* <Route path="/SP_ContractType" component={SP_ContractType} /> */}
           <Route path="/chat" component={Chat} />
-          <Route
-            exact
-            path="/forgotpassword"
-            component={ResetPasswordRequest}
-          />
+          <Route path="/forgotpassword" component={ResetPasswordRequest} />
           {/* problem here */}
           <Route path="/Home/:key" component={EnterNewPassword} />
           <Route path="/newfeeds" component={NewFeeds} />
@@ -146,6 +143,10 @@ const routing = (
           <Route path="/reviews/:projectId/" component={GiveReviews} />
 
           <Route path="/myproject" component={MyProject} />
+          <Route
+            path="/serviceProvider/:spId"
+            component={ServiceProviderDetails}
+          />
           <Route path="/editProfileCust" component={EditProfileCust} />
 
           {/* <Route path='/bid' component={Bid}/>  

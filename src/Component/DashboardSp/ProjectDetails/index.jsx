@@ -23,6 +23,7 @@ class index extends Component {
       token: "",
       result: "",
       isOpen: false,
+      custId: "",
       reason: "",
       reasonLoading: false,
       closeDisabled: false,
@@ -80,7 +81,7 @@ class index extends Component {
         if (json.success) {
           // console.log("result", json.result);
           let result = json.result;
-          console.log(result);
+          console.log("cutsId", result.customer.id);
           let duration_props = this.props.t("duration");
           let budget_props = this.props.t("budget");
           let description_props = this.props.t("description");
@@ -263,7 +264,8 @@ class index extends Component {
 
           this.setState({
             result: result,
-            projectBids: projectBids
+            projectBids: projectBids,
+            custId: result.customer.id
           });
         }
       })
@@ -345,6 +347,9 @@ class index extends Component {
   }
   backButton = () => {
     this.props.history.push("/mydashboard");
+  };
+  gotoCustomerProfile = () => {
+    this.props.history.push(`/customerDetails/${this.state.custId}`);
   };
   render() {
     const show =
@@ -480,6 +485,17 @@ class index extends Component {
                       style={{ width: "200px" }}
                     >
                       {this.props.t("back")}
+                    </button>
+                  </div>
+                </div>
+                <div class=" row ">
+                  <div class="col-md-12 col-12 mt-5 attach">
+                    <button
+                      onClick={() => this.gotoCustomerProfile()}
+                      className="button"
+                      style={{ width: "200px" }}
+                    >
+                      {this.props.t("customer_profile")}
                     </button>
                   </div>
                 </div>

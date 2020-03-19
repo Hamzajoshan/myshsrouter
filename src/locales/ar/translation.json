@@ -201,6 +201,8 @@
   "forgot_password": "هل نسيت كلمة المرور ؟",
   "id_star": "الاسم المستخدم*",
   "password_star": "كلمه السر*",
+  "customer_profile": "ملف الزائر",
+  "sp_profile": "ملف تعريف مقدم الخدمة",
   "re-type_password_star": "اعد ادخال كلمة المرور*",
   "re-type_password": "اعد ادخال كلمة المرور",
   "city": "مدينة",

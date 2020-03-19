@@ -28,8 +28,40 @@ class index extends Component {
       address: "",
       district: "",
       parent: "2",
+      citiesToShow: "",
       parentSptypes: "",
       childResult: [],
+      cities: [
+        {
+          value: "Select City*",
+          displayValue: this.props.t("select_city")
+        },
+        {
+          value: "Riyadh",
+          displayValue: this.props.t("riyadh")
+        },
+        {
+          value: "Jeddah",
+          displayValue: this.props.t("jeddah")
+        },
+        {
+          value: "Ad Dammām",
+          displayValue: this.props.t("ad_Dammām")
+        },
+        {
+          value: "Medina",
+          displayValue: this.props.t("medina")
+        },
+        {
+          value: "Mecca",
+          displayValue: this.props.t("mecca")
+        },
+        {
+          value: "Dhahran",
+          displayValue: this.props.t("dhahran")
+        }
+      ],
+      isActive: true,
       myProjects: "",
       userId: "",
       result: "",
@@ -253,7 +285,8 @@ class index extends Component {
       district,
       workInterestValuesMultiSelect,
       serviceProviderTypesMultiSelect,
-      idNumber
+      idNumber,
+      isActive
     } = this.state;
     console.log("Fname", Fname);
     console.log("Lname", Lname);
@@ -287,8 +320,7 @@ class index extends Component {
       city === "" ||
       address === "" ||
       idNumber === "" ||
-      workInterestValuesMultiSelect.length < 1 ||
-      serviceProviderTypesMultiSelect.length < 1
+      workInterestValuesMultiSelect.length < 1
     ) {
       if (this.state.Fname === "") {
         // $(this.refs['fname']).focus();
@@ -379,15 +411,6 @@ class index extends Component {
           submitDisabled: false
         });
       }
-      if (this.state.serviceProviderTypesMultiSelect.length < 1) {
-        // $(this.refs['username']).focus();
-
-        this.setState({
-          spTypesLable: true,
-          loading: false,
-          submitDisabled: false
-        });
-      }
     } else {
       console.log("all checks ok");
       // return;
@@ -404,7 +427,9 @@ class index extends Component {
           name: Fname,
           surname: Lname,
           emailAddress: email,
+          isActive: isActive,
           phoneNumber: pnumber,
+          userType: 2,
           reffId: userId,
           id: sub
         })
@@ -533,9 +558,11 @@ class index extends Component {
         .then(res => res.json())
         .then(json => {
           if (json.success) {
-            //  console.log(json.result)
+            console.log("basic user", json.result);
+
             let user = json.result;
             let Fname = user.name;
+            let isActive = user.isActive;
             let Lname = user.surname;
             let pnumber = user.phoneNumber;
             let emailAddress = user.emailAddress;
@@ -546,7 +573,8 @@ class index extends Component {
               Fname: Fname,
               Lname: Lname,
               pnumber: pnumber,
-              email: emailAddress
+              email: emailAddress,
+              isActive: isActive
             });
           }
         })
@@ -572,56 +600,25 @@ class index extends Component {
               selectedWorkInterstsNew.push(selectedWorkIntersts[i].workIntrest);
             }
             for (let j = 0; j < selectedSpType.length; j++) {
-              selectedSpTypeNew.push(selectedSpType[j].serviceProviderType);
+              selectedSpTypeNew.push(selectedSpType[j].serviceProviderType.id);
             }
-            let parent = selectedSpTypeNew[0].typeParrent;
+
             console.log("selectedSpTypeNew", selectedSpTypeNew);
-
-            //Make API For ParentSp Types
-
-            fetch(
-              `${baseUrl}api/services/app/ServiceProviderType/GetParentSpTypes`
-            )
-              .then(res => res.json())
-              .then(json => {
-                if (json.success) {
-                  let result = json.result;
-                  let typeName;
-                  let selectedOption = this.state.parent;
-                  let isSelected = false;
-                  let SpTypesParent = result.map(function(key) {
-                    if (cookie.load("Language")) {
-                      //hamzajoshan
-
-                      if (selectedOption == key.id) {
-                        isSelected = true;
-                      } else {
-                        isSelected = false;
-                      }
-                      let langCookie = cookie.load("Language");
-                      if (langCookie == "ar") {
-                        typeName = key.typeNameArabic;
-                      } else if (langCookie == "en") {
-                        typeName = key.typeName;
-                      }
-                    } else {
-                      typeName = key.typeNameArabic;
-                    }
-                    return (
-                      <option selected={isSelected} key={key.id} value={key.id}>
-                        {typeName}
-                      </option>
-                    );
-                  });
-                  this.setState({
-                    parentSptypes: SpTypesParent
-                  });
-                }
-              })
-              .catch(error => {
-                console.error(error);
-              });
-            this.getChildeSpTypes(parent);
+            let selectedCity = user.city;
+            // console.log("selectedCity", selectedCity);
+            let isSelectedCity = false;
+            let citiesToShow = this.state.cities.map(function(key) {
+              if (selectedCity == key.value) {
+                isSelectedCity = true;
+              } else {
+                isSelectedCity = false;
+              }
+              return (
+                <option selected={isSelectedCity} value={key.value}>
+                  {key.displayValue}
+                </option>
+              );
+            });
             this.getActiveWorkInterestTypes();
             this.setState(
               {
@@ -635,7 +632,7 @@ class index extends Component {
                 workInterestValuesMultiSelect: selectedWorkInterstsNew,
                 selectedSpType: selectedSpTypeNew,
                 serviceProviderTypesMultiSelect: selectedSpTypeNew,
-                parent: parent
+                citiesToShow: citiesToShow
               },
               () => {
                 console.log("selectedSpType", selectedSpType);
@@ -696,6 +693,7 @@ class index extends Component {
                         class="effect-16-profile"
                         type="text"
                         placeholder=""
+                        readOnly
                         onChange={this.onFnameChange}
                         value={this.state.Fname}
                       />
@@ -712,6 +710,7 @@ class index extends Component {
                       <input
                         class="effect-16-profile"
                         type="text"
+                        readOnly
                         placeholder=""
                         onChange={this.onLnameChange}
                         value={this.state.Lname}
@@ -772,6 +771,7 @@ class index extends Component {
                         class="effect-16-profile"
                         type="text"
                         placeholder=""
+                        readOnly
                         onChange={this.onUsernameChange}
                         value={this.state.username}
                       />
@@ -830,13 +830,14 @@ class index extends Component {
                           {this.props.t("city_req")}
                         </label>
                       ) : null}
-                      <input
-                        class="effect-16-profile"
-                        type="text"
-                        placeholder=""
-                        onChange={this.onCityChange}
+                      <select
+                        className="form-control mainLoginInput"
+                        id="inputDado22"
                         value={this.state.city}
-                      />
+                        onChange={this.onCityChange}
+                      >
+                        {this.state.citiesToShow}
+                      </select>
                       <span class="focus-border-profile"></span>
                     </div>
                   </div>
@@ -881,46 +882,6 @@ class index extends Component {
                         value={this.state.district}
                       />
                       <span class="focus-border-profile"></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-12 ">
-                  <div class=" row">
-                    <div class="col-md-12 input-effect-profile mt-5">
-                      <select
-                        onChange={this.selectedServiveProvider}
-                        placeholder="Select an option"
-                        value={this.state.parent}
-                        className="form-control mainLoginInput"
-                        id="contract-dropdown"
-                      >
-                        {this.state.parentSptypes}
-                        {/* <option value="sgfsg" className="">Select</option>
-                            <option value="sfgf" className="">Select1</option>
-
-                            <option value="fsgfg" className="">Select2</option> */}
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 ">
-                  <div class=" row">
-                    <div class="col-md-12 input-effect-profile mt-5">
-                      <label>Child SpTypes</label>
-                      <br />
-                      {this.state.spTypesLable ? (
-                        <label className="text-danger">
-                          Select At Least one Service Provider Type
-                        </label>
-                      ) : null}
-                      <Multiselect
-                        options={this.state.childResult} // Options to display in the dropdown
-                        selectedValues={this.state.selectedSpType} // Preselected value to persist in dropdown
-                        onSelect={this.onSelectServiceProvider} // Function will trigger on select event
-                        onRemove={this.onRemoveServiceProvider} // Function will trigger on remove event
-                        displayValue="typeName" // Property name to display in the dropdown options
-                      />
                     </div>
                   </div>
                 </div>

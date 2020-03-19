@@ -115,6 +115,8 @@
   "settings": "Setting",
   "logout": "Logout",
   "hi": "Hi",
+  "customer_profile": "Customer Profile",
+  "sp_profile": "Service Provider Profile",
   "my_profile": "My Profile",
   "your_profile": "Your Profile",
   "description": "Description",
