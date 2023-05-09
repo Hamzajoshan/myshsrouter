@@ -13,7 +13,7 @@
     "i18next-browser-languagedetector": "^4.0.2",
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.27",
     "multiselect-react-dropdown": "^1.4.7",
     "node-sass": "^4.13.1",
